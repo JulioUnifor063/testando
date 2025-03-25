@@ -1,28 +1,9 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
+<form id="registerForm" method="post">
+    <label for="newUsername">Usuário:</label>
+    <input type="text" id="newUsername" name="newUsername" required>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro de Login</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+    <label for="newPassword">Senha:</label>
+    <input type="password" id="newPassword" name="newPassword" required>
 
-<body>
-    <div class="login-container">
-        <h2>Cadastrar Login</h2>
-        <form id="registerForm">
-            <label for="newUsername">Usuário:</label>
-            <input type="text" id="newUsername" name="newUsername" required>
-
-            <label for="newPassword">Senha:</label>
-            <input type="password" id="newPassword" name="newPassword" required>
-
-            <button type="submit">Cadastrar</button>
-        </form>
-        <p id="message"></p>
-    </div>
-    <script src="script.js"></script>
-</body>
-
-</html>
+    <button type="submit">Cadastrar</button>
+</form>
