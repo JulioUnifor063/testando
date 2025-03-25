@@ -1,14 +1,17 @@
-document.getElementById("loginForm").addEventListener("submit", function(event) {
+document.getElementById("registerForm").addEventListener("submit", function(event) {
     event.preventDefault(); // Previne o envio do formulário
-    const username = document.getElementById("username").value;
-    const password = document.getElementById("password").value;
 
-    // Exemplo simples de verificação
-    if (username === "admin" && password === "1234") {
+    const username = document.getElementById("newUsername").value;
+    const password = document.getElementById("newPassword").value;
+
+    if (username && password) {
+        // Salva o login no localStorage
+        localStorage.setItem("username", username);
+        localStorage.setItem("password", password);
         document.getElementById("message").style.color = "green";
-        document.getElementById("message").textContent = "Login bem-sucedido!";
+        document.getElementById("message").textContent = "Login cadastrado com sucesso!";
     } else {
         document.getElementById("message").style.color = "red";
-        document.getElementById("message").textContent = "Usuário ou senha incorretos.";
+        document.getElementById("message").textContent = "Por favor, preencha todos os campos.";
     }
 });
