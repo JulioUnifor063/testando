@@ -1,5 +1,5 @@
 document.getElementById("registerForm").addEventListener("submit", function(event) {
-    event.preventDefault(); // Previne o envio do formulário
+    event.preventDefault(); // Previne o envio padrão do formulário para a URL
 
     const username = document.getElementById("newUsername").value;
     const password = document.getElementById("newPassword").value;
@@ -8,6 +8,7 @@ document.getElementById("registerForm").addEventListener("submit", function(even
         // Salva o login no localStorage
         localStorage.setItem("username", username);
         localStorage.setItem("password", password);
+
         document.getElementById("message").style.color = "green";
         document.getElementById("message").textContent = "Login cadastrado com sucesso!";
     } else {
