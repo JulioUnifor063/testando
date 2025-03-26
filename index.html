@@ -1,18 +1,43 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interface Animada</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Botões Animados</title>
+    <style>
+        body {
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+
+        .button {
+            background: linear-gradient(45deg, blue, black);
+            color: white;
+            padding: 15px 30px;
+            font-size: 18px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            margin: 10px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 15px blue;
+        }
+    </style>
 </head>
 
 <body>
-    <div class="container">
-        <h1>Bem-vindo!</h1>
-        <button>Começar</button>
-    </div>
+    <button class="button">Botão 1</button>
+    <button class="button">Botão 2</button>
+    <button class="button">Botão 3</button>
 </body>
 
 </html>
